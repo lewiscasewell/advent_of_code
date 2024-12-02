@@ -31,7 +31,7 @@ if __name__ == "__main__":
 """)
     
     # Create input.txt and example.txt
-    for filename in ["input.txt", "example.txt"]:
+    for filename in ["input.txt"]:
         file_path = os.path.join(day_path, filename)
         if not os.path.exists(file_path):
             open(file_path, "w").close()
