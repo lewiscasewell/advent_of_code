@@ -1,12 +1,11 @@
 import os
-import sys
 from argparse import ArgumentParser
 
 def scaffold_day(day: int, year: int):
     """
     Scaffold a new day folder with necessary files.
     """
-    day_str = f"day{str(day).zfill(2)}"
+    day_str = f"day{str(day)}"
     day_path = os.path.join(str(year), day_str)
 
     # Create the day folder
