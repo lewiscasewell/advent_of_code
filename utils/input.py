@@ -5,7 +5,7 @@ def read_input(filename="input.txt", day=None, year=None):
     Read the input file for a given day and year.
     """
     if day and year:
-        path = f"{year}/day{str(day).zfill(2)}/{filename}"
+        path = f"{year}/day{str(day)}/{filename}"
     else:
         path = filename
 

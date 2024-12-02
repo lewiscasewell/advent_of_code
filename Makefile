@@ -1,7 +1,7 @@
 # Variables
 PYTHON := uv run python
 YEAR := 2024
-DAY := 01  # Default to day 01
+DAY := 1
 
 # Scaffolding a new day
 setup-day:
