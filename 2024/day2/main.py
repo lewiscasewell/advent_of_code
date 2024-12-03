@@ -1,4 +1,5 @@
 from utils.input import read_input
+from utils.benchmark import benchmark
 
 unsafe = "Unsafe"
 safe = "Safe"
@@ -69,3 +70,5 @@ if __name__ == "__main__":
     data = read_input(day=2, year=2024)
     print(f"Part 1: {solve_part1(data)}")
     print(f"Part 2: {solve_part2(data)}")
+    benchmark(func=solve_part1, data=data)
+    benchmark(func=solve_part2, data=data)

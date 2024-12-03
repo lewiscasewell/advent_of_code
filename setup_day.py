@@ -17,6 +17,7 @@ def scaffold_day(day: int, year: int):
         with open(main_file, "w") as f:
             f.write(f"""\
 from utils.input import read_input
+from utils.benchmark import benchmark
 
 def solve_part1(data):
     return "Not implemented"
@@ -27,11 +28,13 @@ def solve_part2(data):
 if __name__ == "__main__":
     data = read_input(day={day}, year={year})
     print(f"Part 1: {{solve_part1(data)}}")
+    benchmark(func=solve_part1, data=data)
     print(f"Part 2: {{solve_part2(data)}}")
+    benchmark(func=solve_part2, data=data)
 """)
     
-    # Create input.txt and example.txt
-    for filename in ["input.txt", "example.txt"]:
+    # Create input.txt
+    for filename in ["input.txt"]:
         file_path = os.path.join(day_path, filename)
         if not os.path.exists(file_path):
             open(file_path, "w").close()
